@@ -66,8 +66,6 @@ public class DreamBirthdayBot {
         configLoader = new ConfigLoader();
         configLoader.loadConfig(); // Load the configuration file
 
-        token = "MTA5ODUyODg2NzU2NTY5OTA4Mg.G2Iw6s.WLfjxvQ0JY_XUeKD2BYCB3Ja5rvS2bqbz2rP4s";
-
         botLogin(); // log in the bot
 
         logger.info("Bot startup successful, have fun!");
