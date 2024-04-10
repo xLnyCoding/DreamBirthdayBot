@@ -21,7 +21,15 @@ public class ConfigLoader {
         if(DreamBirthdayBot.getInstance().debug) return;
 
         DreamBirthdayBot.getInstance().token = ((HashMap<String, Object>) fileReader.getValues().get("bot")).get("token").toString();
-        DreamBirthdayBot.getInstance().ownerid = Integer.toUnsignedLong((int) ((HashMap<String, Object>) fileReader.getValues().get("bot")).get("ownerid"));
+        DreamBirthdayBot.getInstance().ownerid = (long) ((HashMap<String, Object>) fileReader.getValues().get("bot")).get("ownerid");
+        DreamBirthdayBot.getInstance().guildid = (long) ((HashMap<String, Object>) fileReader.getValues().get("bot")).get("guildid");
+        DreamBirthdayBot.getInstance().birthdayid = (long) ((HashMap<String, Object>) fileReader.getValues().get("bot")).get("birthdaychannel");
+
+        DreamBirthdayBot.getInstance().mysqluser = ((HashMap<String, Object>) fileReader.getValues().get("database")).get("ip").toString();
+        DreamBirthdayBot.getInstance().mysqlport = ((int) ((HashMap<String, Object>) fileReader.getValues().get("database")).get("port"));
+        DreamBirthdayBot.getInstance().mysqldatabase = ((HashMap<String, Object>) fileReader.getValues().get("database")).get("database").toString();
+        DreamBirthdayBot.getInstance().mysqluser = ((HashMap<String, Object>) fileReader.getValues().get("database")).get("user").toString();
+        DreamBirthdayBot.getInstance().mysqlpassword = ((HashMap<String, Object>) fileReader.getValues().get("database")).get("password").toString();
     }
 
 }
