@@ -22,13 +22,13 @@ public class BirthdayScanJob {
 
     public void start() {
         new Thread(() -> {
+            int lastDay = 0;
             while (true) {
 
                 Instant instant = Instant.now();
                 ZonedDateTime date = instant.atZone(ZoneId.of("UTC"));
-                int lastDay = 0;
 
-                if(DreamBirthdayBot.getInstance().birthdayScanOverride || date.getHour() == 12 && date.getMinute() == 0 && (lastDay < date.getDayOfMonth() || date.getDayOfMonth() == 1 && lastDay <= 28)) {
+                if(DreamBirthdayBot.getInstance().birthdayScanOverride || date.getHour() == 10 && date.getMinute() == 0 && (lastDay < date.getDayOfMonth() || (date.getDayOfMonth() == 1 && lastDay >= 28))) {
                     lastDay = date.getDayOfMonth();
                     logger.info("Day: " + date.getDayOfMonth() + " Month: " + date.getMonthValue());
                     logger.info("Scanning birthdays...");
@@ -52,7 +52,7 @@ public class BirthdayScanJob {
                                     embedBuilder.setDescription("Happy Birthday!");
                                 }
 
-                                embedBuilder.setImage("https://media1.tenor.com/m/yFTXf00VVN8AAAAC/my-bday-is-in-2-days.gif");
+                                embedBuilder.setImage("https://tenor.com/view/happy-birthday-donut-doughnut-birthday-happy-bday-gif-16469850");
 
                                 channel.sendMessage(member.getAsMention()).addEmbeds(embedBuilder.build()).queue();
                             }
