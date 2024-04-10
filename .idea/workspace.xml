@@ -4,23 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28be5696-c630-4d95-a8ad-349c27374144" name="Changes" comment="Initial Upload">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/commands/AddBirthdayCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/commands/CommandListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/console/ConsoleCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/console/ConsoleManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/console/ConsoleThread.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/console/commands/PingCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/console/commands/ReloadCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/console/commands/ScanOverrideCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/console/commands/ShutdownCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/jobs/BirthdayScanJob.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/util/DatabaseConnector.java" afterDir="false" />
+    <list default="true" id="28be5696-c630-4d95-a8ad-349c27374144" name="Changes" comment="Added JDBC driver dependency">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/DreamBirthdayBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/DreamBirthdayBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/util/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/util/ConfigLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/jobs/BirthdayScanJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/jobs/BirthdayScanJob.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +39,9 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Application.DreamBirthdayBot.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DreamBithdayBot [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DreamBithdayBot [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.DreamBithdayBot [package].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -89,12 +79,111 @@
       <option name="project" value="LOCAL" />
       <updated>1712605036875</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Addded the birthday command">
+      <option name="closed" value="true" />
+      <created>1712777631023</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712777631023</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added the birthday scan job to scan for birthdays">
+      <option name="closed" value="true" />
+      <created>1712777647920</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1712777647920</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added command handler for discord slash commands">
+      <option name="closed" value="true" />
+      <created>1712777662040</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1712777662040</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added neccecary fields to the config file">
+      <option name="closed" value="true" />
+      <created>1712777674022</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1712777674022</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added importing of neccecary fields">
+      <option name="closed" value="true" />
+      <created>1712777689946</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1712777689946</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added console command logic">
+      <option name="closed" value="true" />
+      <created>1712777701693</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1712777701693</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added database connector for mysql">
+      <option name="closed" value="true" />
+      <created>1712777711685</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1712777711685</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Major changes, see commits for other classes (related)">
+      <option name="closed" value="true" />
+      <created>1712777737933</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1712777737933</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implemented console commands">
+      <option name="closed" value="true" />
+      <created>1712777757933</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712777757933</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update">
+      <option name="closed" value="true" />
+      <created>1712777763404</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712777763404</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added JDBC driver dependency">
+      <option name="closed" value="true" />
+      <created>1712777787815</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1712777787815</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="InitialUpload" />
     <MESSAGE value="Initial Upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Upload" />
+    <MESSAGE value="Addded the birthday command" />
+    <MESSAGE value="Added the birthday scan job to scan for birthdays" />
+    <MESSAGE value="Added command handler for discord slash commands" />
+    <MESSAGE value="Added neccecary fields to the config file" />
+    <MESSAGE value="Added importing of neccecary fields" />
+    <MESSAGE value="Added console command logic" />
+    <MESSAGE value="Added database connector for mysql" />
+    <MESSAGE value="Major changes, see commits for other classes (related)" />
+    <MESSAGE value="Implemented console commands" />
+    <MESSAGE value="update" />
+    <MESSAGE value="Added JDBC driver dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added JDBC driver dependency" />
   </component>
 </project>
