@@ -9,3 +9,6 @@ database:
   database: 'birthdays'
   user: 'root'
   password: ''
+gifs:
+  - 'https://media1.tenor.com/m/alwkw27l-tsAAAAC/happy-birthday-donut.gif'
+  - 'https://media1.tenor.com/m/7ta-bOJwdwgAAAAC/happy-birthday-cat.gif'
