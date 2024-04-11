@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
+import java.util.List;
 
 public class ConfigLoader {
 
@@ -24,6 +25,8 @@ public class ConfigLoader {
         DreamBirthdayBot.getInstance().ownerid = (long) ((HashMap<String, Object>) fileReader.getValues().get("bot")).get("ownerid");
         DreamBirthdayBot.getInstance().guildid = (long) ((HashMap<String, Object>) fileReader.getValues().get("bot")).get("guildid");
         DreamBirthdayBot.getInstance().birthdayid = (long) ((HashMap<String, Object>) fileReader.getValues().get("bot")).get("birthdaychannel");
+
+        DreamBirthdayBot.getInstance().gifs = (List<String>) fileReader.getValues().get("gifs");
 
         DreamBirthdayBot.getInstance().mysqluser = ((HashMap<String, Object>) fileReader.getValues().get("database")).get("ip").toString();
         DreamBirthdayBot.getInstance().mysqlport = ((int) ((HashMap<String, Object>) fileReader.getValues().get("database")).get("port"));
