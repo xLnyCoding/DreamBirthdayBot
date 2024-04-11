@@ -2,6 +2,8 @@ package de.dreamland.birthdaybot;
 
 import de.dreamland.birthdaybot.commands.AddBirthdayCommand;
 import de.dreamland.birthdaybot.commands.CommandListener;
+import de.dreamland.birthdaybot.commands.SetCustomGifCommand;
+import de.dreamland.birthdaybot.commands.UnsetCustomGifCommand;
 import de.dreamland.birthdaybot.console.ConsoleManager;
 import de.dreamland.birthdaybot.console.commands.PingCommand;
 import de.dreamland.birthdaybot.console.commands.ReloadCommand;
@@ -14,7 +16,6 @@ import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.interactions.commands.Command;
-import net.dv8tion.jda.api.interactions.commands.build.Commands;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.MemberCachePolicy;
 import net.dv8tion.jda.api.utils.cache.CacheFlag;
@@ -22,7 +23,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.InputStream;
-import java.util.EventListener;
 import java.util.List;
 
 public class DreamBirthdayBot {
@@ -66,6 +66,8 @@ public class DreamBirthdayBot {
 
     public volatile boolean birthdayScanOverride = false;
 
+    public volatile List<String> gifs;
+
     public String mysqlip = "";
     public int mysqlport = 3306;
     public String mysqldatabase = "";
@@ -78,6 +80,8 @@ public class DreamBirthdayBot {
     public BirthdayScanJob birthdayScanJob;
 
     public AddBirthdayCommand addBirthdayCommand;
+    public SetCustomGifCommand setCustomGifCommand;
+    public UnsetCustomGifCommand unsetCustomGifCommand;
 
     /**
      * Method to boot the bot, private because the application can only be started once, use the reload method to reload
@@ -109,6 +113,8 @@ public class DreamBirthdayBot {
 
         logger.info("Loading commands...");
         addBirthdayCommand = new AddBirthdayCommand();
+        setCustomGifCommand = new SetCustomGifCommand();
+        unsetCustomGifCommand = new UnsetCustomGifCommand();
         logger.info("Commands loaded!");
 
         logger.info("Loading listeners...");
