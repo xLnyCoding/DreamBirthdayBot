@@ -1,11 +1,10 @@
 package de.dreamland.birthdaybot.jobs;
 
 import de.dreamland.birthdaybot.DreamBirthdayBot;
+import de.dreamland.birthdaybot.util.RandomGifPicker;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Member;
-import net.dv8tion.jda.api.entities.MessageEmbed;
-import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -52,7 +51,9 @@ public class BirthdayScanJob {
                                     embedBuilder.setDescription("Happy Birthday!");
                                 }
 
-                                embedBuilder.setImage("https://tenor.com/view/happy-birthday-donut-doughnut-birthday-happy-bday-gif-16469850");
+                                logger.info(member.getIdLong());
+
+                                embedBuilder.setImage(RandomGifPicker.getRandomGif(member.getIdLong()));
 
                                 channel.sendMessage(member.getAsMention()).addEmbeds(embedBuilder.build()).queue();
                             }
