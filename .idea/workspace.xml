@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28be5696-c630-4d95-a8ad-349c27374144" name="Changes" comment="Added JDBC driver dependency">
+    <list default="true" id="28be5696-c630-4d95-a8ad-349c27374144" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/commands/SetCustomGifCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/commands/UnsetCustomGifCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/util/RandomGifPicker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/DreamBirthdayBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/DreamBirthdayBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/commands/CommandListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/commands/CommandListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/jobs/BirthdayScanJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/jobs/BirthdayScanJob.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/util/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/util/ConfigLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +173,31 @@
       <option name="project" value="LOCAL" />
       <updated>1712777787815</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed minor bugs">
+      <option name="closed" value="true" />
+      <created>1712780020287</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1712780020287</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added manifest">
+      <option name="closed" value="true" />
+      <created>1712780027512</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1712780027512</updated>
+    </task>
+    <task id="LOCAL-00015" summary="update">
+      <option name="closed" value="true" />
+      <created>1712780032701</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1712780032701</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -182,8 +212,10 @@
     <MESSAGE value="Added database connector for mysql" />
     <MESSAGE value="Major changes, see commits for other classes (related)" />
     <MESSAGE value="Implemented console commands" />
-    <MESSAGE value="update" />
     <MESSAGE value="Added JDBC driver dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added JDBC driver dependency" />
+    <MESSAGE value="Fixed minor bugs" />
+    <MESSAGE value="Added manifest" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
