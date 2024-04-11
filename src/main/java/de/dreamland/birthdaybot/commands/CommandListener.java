@@ -1,6 +1,7 @@
 package de.dreamland.birthdaybot.commands;
 
 import de.dreamland.birthdaybot.DreamBirthdayBot;
+import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import org.apache.logging.log4j.LogManager;
@@ -47,6 +48,33 @@ public class CommandListener extends ListenerAdapter {
             return;
         }
 
+        if(event.getName().equalsIgnoreCase("set-custom-gif")) {
+            User user = event.getOption("user").getAsUser();
+            String link = event.getOption("gif").getAsString();
+
+            ResultSet rs = DreamBirthdayBot.getInstance().databaseConnector.getResult("SELECT uid FROM gifs WHERE uid='"+user.getIdLong()+"';");
+            try {
+                if (rs.next()) {
+                    DreamBirthdayBot.getInstance().databaseConnector.update("UPDATE gifs SET name='" + user.getName() + "', link=" + link + " WHERE uid='" + user.getIdLong() + "';");
+                } else {
+                    DreamBirthdayBot.getInstance().databaseConnector.update("INSERT INTO gifs (uid, name, link) VALUES ("+ user.getIdLong() + ", '" + user.getName() + "', '" + link + "');");
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+
+            event.getHook().sendMessage("Gif set successfully!").queue();
+            return;
+        }
+
+        if(event.getName().equalsIgnoreCase("unset-custom-gif")) {
+            User user = event.getOption("user").getAsUser();
+
+            DreamBirthdayBot.getInstance().databaseConnector.update("DELETE FROM gifs WHERE uid="+user.getIdLong()+";");
+
+            event.getHook().sendMessage("Gif unset successfully!").queue();
+            return;
+        }
 
         event.getHook().sendMessage("Command not found!").queue();
 
