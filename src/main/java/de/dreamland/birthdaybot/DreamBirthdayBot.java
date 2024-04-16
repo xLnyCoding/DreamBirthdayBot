@@ -5,10 +5,7 @@ import de.dreamland.birthdaybot.commands.CommandListener;
 import de.dreamland.birthdaybot.commands.SetCustomGifCommand;
 import de.dreamland.birthdaybot.commands.UnsetCustomGifCommand;
 import de.dreamland.birthdaybot.console.ConsoleManager;
-import de.dreamland.birthdaybot.console.commands.PingCommand;
-import de.dreamland.birthdaybot.console.commands.ReloadCommand;
-import de.dreamland.birthdaybot.console.commands.ScanOverrideCommand;
-import de.dreamland.birthdaybot.console.commands.ShutdownCommand;
+import de.dreamland.birthdaybot.console.commands.*;
 import de.dreamland.birthdaybot.jobs.BirthdayScanJob;
 import de.dreamland.birthdaybot.util.ConfigLoader;
 import de.dreamland.birthdaybot.util.DatabaseConnector;
@@ -97,6 +94,7 @@ public class DreamBirthdayBot {
         consoleManager.registerCommand("reload", new ReloadCommand());
         consoleManager.registerCommand("stop", new ShutdownCommand());
         consoleManager.registerCommand("scanb", new ScanOverrideCommand());
+        consoleManager.registerCommand("status", new StatusCommand());
         consoleManager.start();
 
 
