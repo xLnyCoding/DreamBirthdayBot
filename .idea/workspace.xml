@@ -4,16 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="28be5696-c630-4d95-a8ad-349c27374144" name="Changes" comment="update">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/commands/SetCustomGifCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/commands/UnsetCustomGifCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/util/RandomGifPicker.java" afterDir="false" />
+    <list default="true" id="28be5696-c630-4d95-a8ad-349c27374144" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/console/commands/StatusCommand.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/DreamBirthdayBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/DreamBirthdayBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/commands/CommandListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/commands/CommandListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/jobs/BirthdayScanJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/jobs/BirthdayScanJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/util/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/dreamland/birthdaybot/util/ConfigLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +40,7 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Application.DreamBirthdayBot.executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.DreamBithdayBot-1.0-SNAPSHOT.jar.executor&quot;: &quot;Run&quot;,
     &quot;Maven.DreamBithdayBot [clean].executor&quot;: &quot;Run&quot;,
     &quot;Maven.DreamBithdayBot [compile].executor&quot;: &quot;Run&quot;,
     &quot;Maven.DreamBithdayBot [package].executor&quot;: &quot;Run&quot;,
@@ -59,6 +55,17 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\IntelliProjects\DreamBithdayBot\src\main\resources" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DreamBithdayBot-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/DreamBithdayBot-1.0-SNAPSHOT.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.DreamBithdayBot-1.0-SNAPSHOT.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -197,7 +204,79 @@
       <option name="project" value="LOCAL" />
       <updated>1712780032701</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added random gif logic">
+      <option name="closed" value="true" />
+      <created>1712863276583</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1712863276583</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Added set and unset user gif command">
+      <option name="closed" value="true" />
+      <created>1712863288879</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1712863288879</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added gif links">
+      <option name="closed" value="true" />
+      <created>1712863296681</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1712863296681</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Added gif link loading">
+      <option name="closed" value="true" />
+      <created>1712863307136</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1712863307136</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Minor changes">
+      <option name="closed" value="true" />
+      <created>1712863324065</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1712863324065</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Implemented random gif logic">
+      <option name="closed" value="true" />
+      <created>1712863332706</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1712863332706</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Added set user gif command">
+      <option name="closed" value="true" />
+      <created>1712863342196</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1712863342196</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Added unset user gif command">
+      <option name="closed" value="true" />
+      <created>1712863347296</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1712863347296</updated>
+    </task>
+    <task id="LOCAL-00024" summary="updates">
+      <option name="closed" value="true" />
+      <created>1712863353984</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1712863353984</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -216,6 +295,15 @@
     <MESSAGE value="Fixed minor bugs" />
     <MESSAGE value="Added manifest" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="Added random gif logic" />
+    <MESSAGE value="Added set and unset user gif command" />
+    <MESSAGE value="Added gif links" />
+    <MESSAGE value="Added gif link loading" />
+    <MESSAGE value="Minor changes" />
+    <MESSAGE value="Implemented random gif logic" />
+    <MESSAGE value="Added set user gif command" />
+    <MESSAGE value="Added unset user gif command" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
 </project>
